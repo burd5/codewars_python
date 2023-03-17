@@ -25,4 +25,3 @@ def merge_strings(first, second):
             stop = stop - 1
     return first[0: start] + second
 
-
