@@ -16,3 +16,18 @@ def to_jaden_case(string):
         title_str += word[0].upper() + word[1:].lower() + ' '
         
     return title_str.strip()
+
+# solution using imports
+
+import string
+toJadenCase = string.capwords
+
+# other solutions
+
+def to_jaden_case(string):
+    return ' '.join(word.capitalize() for word in string.split())
+
+def to_jaden_case(string):
+    list = string.split()
+    new_list = [i.capitalize() for i in list]
+    return ' '.join(new_list)
