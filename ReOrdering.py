@@ -24,10 +24,8 @@ Examples
 
 def re_ordering(text):
     arr = text.split(' ')
-    cap_word = ''
     for word in arr:
         if word[0].isupper():
-            cap_word = word
             arr.remove(word)
             arr.insert(0, word)
     return ' '.join(arr)
