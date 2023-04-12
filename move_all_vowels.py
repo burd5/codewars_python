@@ -16,7 +16,7 @@ def move_vowels(input):
     vowels = 'aeiou'
     input = list(input)
     end_chars = []
-    for i,letter in enumerate(input):
+    for letter in input:
         if letter in vowels:
             end_chars.append(letter)
     input = [x for x in input if x not in vowels]
