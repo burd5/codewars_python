@@ -19,7 +19,7 @@ def next_letter(s):
     alph_lower = 'abcdefghijklmnopqrstuvwxyz'
     alph_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     converted_str = ''
-    for i,letter in enumerate(s):
+    for letter in s:
         if letter in alph_lower:
             letter_index = alph_lower.index(letter)
             if letter == alph_lower[-1]:
