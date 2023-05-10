@@ -25,3 +25,8 @@ def is_centered(arr: list, n: int) -> bool:
         j -= 1
     return s == n
 
+def is_centered(arr,n):
+    while True:
+        if sum(arr) == n: return True
+        try: (arr.pop(), arr.pop(0))
+        except IndexError: return False
