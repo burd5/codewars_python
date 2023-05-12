@@ -55,3 +55,21 @@ def coin_flips():
     # Code that checks if there is a streak of 6 heads or tails in a row
     if 'HHHHHH' in flips or 'TTTTTT' in flips:
         number_of_streaks +=1
+
+# Character Picture Grid
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+for i in range(6):
+    for j in range(9):
+        if j < 8:
+            print(grid[j][i], end='')
+        else: print(grid[j][i])
