@@ -101,6 +101,9 @@ printBoard(theBoard)
 # Chess Dictionary Validator
 
 def isValidChessBoard(dict):
+
+    # NEED TO CHECK TO SEE IF SQUARES ARE DUPLICATED, IF SO RETURN FALSE
+    
     keys = '1a1b1c1d1e1f1g1h2a2b2c2d2e2f2g2h3a3b3c3d3e3f3g3h4a4b4c4d4e4f4g4h\
     5a5b5c5d5e5f5g5h6a6b6c6d6e6f6g6h7a7b7c7d7e7f7g7h8a8b8c8d8e8f8g8h'
 
