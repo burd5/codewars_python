@@ -99,11 +99,8 @@ printBoard(theBoard)
 """
 
 # Chess Dictionary Validator
-
+"""
 def isValidChessBoard(dict):
-
-    # NEED TO CHECK TO SEE IF SQUARES ARE DUPLICATED, IF SO RETURN FALSE
-    
     keys = '1a1b1c1d1e1f1g1h2a2b2c2d2e2f2g2h3a3b3c3d3e3f3g3h4a4b4c4d4e4f4g4h\
     5a5b5c5d5e5f5g5h6a6b6c6d6e6f6g6h7a7b7c7d7e7f7g7h8a8b8c8d8e8f8g8h'
 
@@ -128,6 +125,9 @@ def isValidChessBoard(dict):
     }
 
     for k,v in dict.items():
+        key_vals = []
+        if k in key_vals: return False
+        key_vals.append(k)
         # key value is not a valid square
         if k not in keys: return False
         # value starts with a w
@@ -175,8 +175,35 @@ def isValidChessBoard(dict):
                 black['queen'] += 1
             elif 'king' in v:
                 black['king'] += 1
-
+        
         # value did not start with w or b so must be an error
         else: return False
     # return True if no errors are found
     return True
+"""
+
+# Fantasy Game Inventory
+
+def displayInventory(inventory):
+    print('Inventory:')
+    item_count = 0
+    for k,v in inventory.items():
+        item_count += v
+        print(f'{inventory[k]} {k}')
+    print(f'Total number of items: ' + str(item_count))
+
+print(displayInventory({'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}))
+
+def addToInventory(inventory, addedItems):
+    inv = inventory
+    for item in addedItems:
+        if item in inv:
+            inv[item] += 1
+        else:
+            inv[item] = 1
+
+    return inv
+
+inventory = addToInventory({'gold coin': 42, 'rope': 1}, ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby'])
+
+displayInventory(inventory)
