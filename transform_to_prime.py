@@ -40,3 +40,18 @@ def minimum_number(numbers):
             next_prime = i
         i += 1
     return next_prime - curr_sum
+
+# other solution
+
+def check_prime(number):
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
+
+def minimum_number(numbers):
+    suma = sum(numbers)
+    while check_prime(suma) != True:
+        suma = suma + 1
+    print(suma)
+    return suma - sum(numbers)
