@@ -23,6 +23,6 @@ def last_survivor(letters, coords):
 # other solution
 
 def last_survivor(letters, coords): 
-    l= list(letters)
+    l = list(letters)
     [l.pop(x) for x in coords]
     return l[0]  

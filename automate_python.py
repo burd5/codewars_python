@@ -180,7 +180,7 @@ def isValidChessBoard(dict):
         else: return False
     # return True if no errors are found
     return True
-"""
+
 
 # Fantasy Game Inventory
 
@@ -207,3 +207,8 @@ def addToInventory(inventory, addedItems):
 inventory = addToInventory({'gold coin': 42, 'rope': 1}, ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby'])
 
 displayInventory(inventory)
+
+"""
+
+# Multi-Clipboard Automatic Messages
+
