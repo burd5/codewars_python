@@ -24,3 +24,5 @@ def min_distance(n):
 def min_distance(n):
     x = [i for i in range(1,n+1) if n%i==0]
     return min(j-i for i,j in zip(x, x[1:]))
+
+##
