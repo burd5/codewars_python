@@ -47,3 +47,11 @@ def minimum_steps(arr, n):
     for i,v in enumerate(arr): 
         s += v
         if s >= n: return i
+
+def minimum_steps(numbers, value):
+    return sum(sum(sorted(numbers)[:i+1]) < value for i in range(len(numbers)))
+
+from itertools import accumulate
+
+def minimum_steps(numbers, value):
+    return next(i for i, s in enumerate(accumulate(sorted(numbers))) if s >= value)
