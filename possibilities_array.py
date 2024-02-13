@@ -22,3 +22,11 @@ Examples:
 
 def is_all_possibilities(arr):
     return sorted(arr) == [i for i in range(0, len(arr))]
+
+# Simpler Solution
+
+def is_all_possibilities(arr):
+    for i in range(0, len(arr)):
+        if i not in arr:
+            return False
+    return True
