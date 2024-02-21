@@ -27,4 +27,3 @@ def consecutive(arr, a, b):
     y = arr.index(b)
     return abs(x-y)==1
 
-#
